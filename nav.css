@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300&family=El+Messiri&family=Pacifico&family=Satisfy&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alexandria', sans-serif;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background: #c79b9b; */
+    background: #ffc5c5;
+    z-index: 9;
+}
+
+.nav {
+    padding: 10px 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand-logo {
+    height: 30px;
+    font-size: 30px;  
+    font-family: 'Satisfy', cursive;
+    color: #f1f1f1;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    width: 500px;
+    display: flex;
+}
+
+.search-box {
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid #f1f1f1;
+    color: #f1f1f1;
+    background: none;
+    outline: none;
+}
+
+.search-btn {
+    width: 20%;
+    height: 40px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #f4f4f4;
+    color: #fdc1c1;;
+    font-size: 15px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.search-box::placeholder {
+    color: #f1f1f1;
+}
+
+.nav-items a {
+    margin-right: 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-items a i{
+    font-size: 32px;
+    font-weight: 1px;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.links-container {
+    width: 100%;
+    display: flex;
+    padding: 10px 10vw;
+    justify-content: center;
+    list-style: none;
+    border-top: 1px solid #f1f1f1;
+}
+
+.link {
+    padding: 0 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.5;
+    transition: .5s;
+}
+
+.link:hover {
+    opacity: 1;
+}
+
+.link:before {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    height: 4px;
+    width: 1%;
+    background: #f1f1f1;
+    border-radius: 50px;
+    transform: scaleX(0);
+    transition:  transform 0.2s linear;
+}
+
+.link:hover:before {
+    transform: scaleX(1);
+}
+
+.login-logout-popup {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    top: 40px;
+    width: 200px;
+    transition: .5s;
+    border: 2px solid #f5f5f5;
+}
+
+.login-logout-popup::after {
+    content: '';
+    position: absolute;
+    top: -7.5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 15px;
+    height: 15px;
+    background: #f4f4f4;
+    border-radius: 5px;
+}
+
+.account-info {
+    font-size: 18px;
+    color: #fdc1c1;
+}
+
+#user-btn {
+    padding: 10px;
+    background: #fdc1c1;
+    color: #f1f1f1;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Media Q */
+@media screen and (max-width: 820px) {
+    .navbar {
+        width: 103%;
+    }
+    
+    .nav-items a {
+        margin-left: 0;
+    }
+
+    .brand-logo {
+        font-size: 25px;
+    }
+
+    .search {
+        width: 300px;
+        display: flex;
+    }
+    
+    .search-box {
+        width: 75%;
+        height: 40px;
+        padding: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border: 1px solid #f1f1f1;
+        color: #f1f1f1;
+        background: none;
+        outline: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 125%;
+    }
+    
+    .nav-items a {
+        margin-left: 0;
+    }
+
+    .brand-logo {
+        font-size: 25px;
+    }
+
+    .search {
+        width: 300px;
+        display: flex;
+    }
+    
+    .search-box {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 415px) {
+    .navbar {
+        width: 240%;
+        height: 23vh;
+    }
+    
+    .nav-items a {
+        margin-left: 0;
+    }
+
+    .nav-items a i{
+        margin-left: 30px;
+    }
+
+    .links-container {
+        
+        padding: 10px 10vw 0 10vw;
+        border-top: 1px solid #f1f1f1;
+    }
+
+    .link {
+        padding: 0 10px;
+        margin-right: 0 5px;
+        font-size: 30px;
+    }
+
+    .brand-logo {
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+
+    .search {
+        width: 300px;
+        display: none;
+    }
+    
+    .search-box {
+        width: 75%;
+    }
+}
